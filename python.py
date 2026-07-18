@@ -29,3 +29,61 @@ print(a//b)
 print(a%b)
 
 """
+
+# largest of 2 number 
+
+"""
+a = int(input("Enter a Value of a : "))
+b = int(input("Enter a Value of b : "))
+
+c = a if a>b else b 
+print("largest Number is : " , c )
+ 
+"""
+
+# largest of 3 number 
+"""
+a = int(input("Enter a Value of a : "))
+b = int(input("Enter a Value of b : "))
+c = int(input("Enter a Value of c : "))
+
+d = a if (a > b and a > c) else (b if b > c else c)
+print("largest Number is : " , d )
+
+"""
+
+# calculate distance betwwen two points 
+
+"""
+import math 
+
+x1 = int(input("Enter the value for x1 : "))
+x2 = int(input("Enter the value for x2 : "))
+y1 = int(input("Enter the value for y1 : "))
+y2 = int(input("Enter the value for y2 : "))
+
+a = math.sqrt((x2-x1)**2 + (y2-y1)**2)
+print(a)
+
+"""
+
+# calculate area of circle 
+
+"""
+import math as m 
+
+r = int(input("Enter a Radius value : "))
+
+a = m.pi * r**2 
+print(a)
+
+"""
+
+# Check year is leap year or not 
+
+year = int(input("Enter a Year : "))
+
+if (year%4==0) :
+    print(year, "is a leap year")
+else :
+    print(year, "is not a leap year")
