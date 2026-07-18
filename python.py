@@ -81,9 +81,26 @@ print(a)
 
 # Check year is leap year or not 
 
+"""
 year = int(input("Enter a Year : "))
 
 if (year%4==0) :
     print(year, "is a leap year")
 else :
     print(year, "is not a leap year")
+
+"""
+
+# Swap 2 number 
+
+"""
+a = int(input("Enter a value of a : "))
+b = int(input("Enter a value of b : "))
+
+print("Before Swaping a = ", a, "b = ", b)
+
+a, b = b, a 
+
+print("After Swaping a = ", a, "b = ", b)
+
+"""
