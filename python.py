@@ -104,3 +104,10 @@ a, b = b, a
 print("After Swaping a = ", a, "b = ", b)
 
 """
+
+# Sum of two number 
+
+a = int(input("Enter a value of a = "))
+b = int(input("Enter a value of b = "))
+
+sum = ("Sum is = ", a+b )
