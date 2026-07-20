@@ -129,7 +129,46 @@ else :
 
 # Multiple Table :
 
+"""
 a = int(input("Enter a Number for Multiple Table : "))
 
 for i in range(1,11):
     print(a, "*", i, "=", a*i)
+
+
+"""
+
+# Finding HCF anf LCM 
+
+"""
+a = int(input("Enter a Value of a : "))
+b = int(input("Enter a value of b : "))
+
+def hcf(a,b):
+    while b : 
+        a, b = b , a % b
+    return a 
+
+
+def lcm(a,b):
+    return (a * b) // hcf(a,b)
+
+
+print("HCF is : ", hcf(a, b))
+print("LCM is : ", lcm(a, b))
+
+"""
+
+# Finding Average 
+
+a = [29, 3 , 20 , 7]
+
+total = sum(a)
+count = len(a)
+
+average = total / count 
+
+print("List is ", a)
+print("Sum is ", total)
+print("count is ", count)
+print("Average is ", average)
