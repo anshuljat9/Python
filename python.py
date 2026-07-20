@@ -105,7 +105,6 @@ print("After Swaping a = ", a, "b = ", b)
 
 """
 
-<<<<<<< HEAD
 # Sum of two number 
 
 """
@@ -118,14 +117,19 @@ sum = ("Sum is = ", a+b )
 
 #check even or odd 
 
+"""
 a = int(input(" Enter a Number : "))
 
 if a % 2 == 0 :
     print("Even")
 else : 
     print("Odd")
-=======
 
+"""
 
+# Multiple Table :
 
->>>>>>> b8010322652da8175f96b8e7d12a440543373a1f
+a = int(input("Enter a Number for Multiple Table : "))
+
+for i in range(1,11):
+    print(a, "*", i, "=", a*i)
