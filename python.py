@@ -105,25 +105,6 @@ print("After Swaping a = ", a, "b = ", b)
 
 """
 
-# Sum of two number 
-
-"""
-a = int(input("Enter a value of a = "))
-b = int(input("Enter a value of b = "))
-
-sum = ("Sum is = ", a+b )
-
-"""
-
-#check even or odd 
-
-a = int(input(" Enter a Number : "))
-
-if a % 2 == 0 :
-print("Even")
-else : 
-print("Odd")
-
 
 
 
