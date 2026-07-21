@@ -161,6 +161,7 @@ print("LCM is : ", lcm(a, b))
 
 # Finding Average 
 
+"""
 a = [29, 3 , 20 , 7]
 
 total = sum(a)
@@ -172,3 +173,44 @@ print("List is ", a)
 print("Sum is ", total)
 print("count is ", count)
 print("Average is ", average)
+
+"""
+
+# print a thank you when user id is arya and password is pyhton 
+
+"""
+user = input("Enter your id : ")
+password = input("Enter your passwors : ") 
+
+if(user == 'arya' and password == 'python') :
+    print("Thank you to visit Our Website ")
+else:
+    print("Sorry!, Try again")
+
+"""
+
+# Check given number is between 1 to 100 
+
+"""
+num = int(input("Enter a Number : "))
+
+if(1 <= num <= 100) :
+    print("Yes number is found")
+else:
+    print("Number is not found")
+
+"""
+
+# display number from 0 to 10 
+
+"""
+for i in range (11):
+    print(i)
+
+"""
+
+# display 10 to 1 in desecending order 
+
+
+for i in range(10, 0, -1):
+    print(i)
