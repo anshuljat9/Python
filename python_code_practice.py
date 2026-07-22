@@ -283,6 +283,7 @@ else:
 
 # Role a Dice 
 
+"""
 import random
 
 print("Welcome to Play a Dice game")
@@ -298,3 +299,5 @@ elif choice == "n":
 
 else:
     print("Invalid input! Please enter Y or N.")
+
+"""
