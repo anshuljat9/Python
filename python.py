@@ -211,6 +211,90 @@ for i in range (11):
 
 # display 10 to 1 in desecending order 
 
-
+"""
 for i in range(10, 0, -1):
     print(i)
+
+"""
+
+# Take a single digit and print value in english 
+
+"""
+num = int(input("Enter a Numberin between 0 to 9 = "))
+
+if(num == '0'):
+    print("Zero")
+elif(num == 1):
+    print("One")
+elif(num == 2):
+    print("Two")
+elif(num == 3):
+    print("Three")
+elif(num == 4):
+    print("Four")
+elif(num == 5):
+    print("Five")
+elif(num == 6):
+    print("Six")
+elif(num == 7):
+    print("Seven")
+elif(num == 8):
+    print("Eight")
+elif(num == 9):
+    print("Nine")
+
+else:
+    print("Enter a Correct number from 0 to 9 ")
+
+"""
+
+# Calculate elctricity Bill
+
+"""
+unit = int(input("Enter your electricity unit : "))
+
+if unit <= 100:
+    bill = unit * 5
+    print(bill)
+
+elif unit <= 200:
+    bill = (100 * 5) + (unit - 100) * 7
+    print(bill)
+
+else:
+    bill = (100 * 5) + (100 * 7) + (unit - 200) * 10
+    print(bill)
+
+"""
+
+# Check number is postive , negative and zero 
+
+"""
+num = int(input("Enter Your number : "))
+
+if(num > 0):
+    print(num," is a Positive Number")
+elif(num < 0):
+    print(num,"is a Negative Number")
+else:
+    print("Number is ZERO!!!")  
+
+"""
+
+# Role a Dice 
+
+import random
+
+print("Welcome to Play a Dice game")
+
+choice = input("You want to Play a game (Y ,N) : ").lower()
+
+if choice == "y":
+    dice = random.randint(1,6)
+    print(dice)
+
+elif choice == "n":
+    print("Thank You to visit our game !!!")
+
+else:
+    print("Invalid input! Please enter Y or N.")
