@@ -305,6 +305,7 @@ else:
 
 # Greeting With respect to time 
 
+"""
 import time
 
 def greet(): # ye function define karta hai bas 
@@ -320,3 +321,5 @@ def greet(): # ye function define karta hai bas
         print("Good Night")
 
 greet() # ye function call karta hai 
+
+"""
