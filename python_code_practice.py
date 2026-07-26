@@ -301,3 +301,22 @@ else:
     print("Invalid input! Please enter Y or N.")
 
 """
+
+
+# Greeting With respect to time 
+
+import time
+
+def greet(): # ye function define karta hai bas 
+    hour = int(time.strftime("%H"))
+
+    if 5 <= hour < 12:
+        print("Good Morning")
+    elif 12 <= hour < 17:
+        print("Good Afternoon")
+    elif 17 <= hour < 21:
+        print("Good Evening")
+    else:
+        print("Good Night")
+
+greet() # ye function call karta hai 
