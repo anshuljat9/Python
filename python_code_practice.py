@@ -336,6 +336,7 @@ while(i>0):
 
 # Search a element in list 
 
+"""
 key = int(input("Enter a Number = "))
 
 l = [1,2,3,4,5,6,7,8,9,0]
@@ -344,3 +345,39 @@ if key in l:
     print("Key is Found In list")
 else:
     print("Key is not found")
+
+"""
+
+# Print cube of number 1 to 10 using while loop 
+
+"""
+import math 
+
+y = 3 
+
+i = 10
+
+while(i>0):
+    print(pow(i ,y))
+    i = i-1
+
+"""
+
+# print a even number from 1 to 100 using while loop 
+
+"""
+i = 100 
+
+while(i>0):
+    print(i)
+    i= i -2 
+"""
+
+# print a positive number from a list 
+
+l = [-1,-2,-3,4,5,-8,7,-9]
+
+for i in l:
+    if(i > 0):
+        print(i)
+
