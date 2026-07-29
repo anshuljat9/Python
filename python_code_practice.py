@@ -374,10 +374,55 @@ while(i>0):
 """
 
 # print a positive number from a list 
-
+"""
 l = [-1,-2,-3,4,5,-8,7,-9]
 
 for i in l:
     if(i > 0):
         print(i)
+"""
 
+# print a plus using a star 
+"""
+n = int(input("Enter a Number "))
+
+mid = n//2 
+
+for i in range(n):
+    for j in range(n):
+        if i == mid or j == mid :
+            print("*", end=" ")
+        else:
+            print(" ", end=" ")
+    print()
+"""
+
+# Print 'H' using a star 
+"""
+n = int(input("Enter a Number "))
+
+mid = n//2 
+
+for i in range(n):
+    for j in range(n):
+        if j == 0 or j == n-1 or i == mid :
+            print("*", end=" ")
+        else:
+            print(" ", end=" ")
+    print()
+"""
+# print '4' using a star 
+
+"""
+n = int(input("Enter a Number "))
+
+mid = n//2 
+
+for i in range(n):
+    for j in range(n):
+        if j == n-1 or (j == 0 and i <= mid) or i == mid:
+            print("*", end=" ")
+        else:
+            print(" ", end=" ")
+    print( )
+"""
