@@ -323,3 +323,24 @@ def greet(): # ye function define karta hai bas
 greet() # ye function call karta hai 
 
 """
+
+# Print a number from 10 to 1 in reverse order 
+"""
+i = 10 
+
+while(i>0):
+    print(i)
+    i = i-1 
+
+"""
+
+# Search a element in list 
+
+key = int(input("Enter a Number = "))
+
+l = [1,2,3,4,5,6,7,8,9,0]
+
+if key in l:
+    print("Key is Found In list")
+else:
+    print("Key is not found")
