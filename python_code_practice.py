@@ -426,3 +426,146 @@ for i in range(n):
             print(" ", end=" ")
     print( )
 """
+
+# Calculate simple interest
+
+import math 
+"""
+#This is for yearly calculator :
+p = float(input("Enter a Principal amount : "))
+r = float(input("Enter a Annual interest rate (percentage): "))
+t = int(input("Enter a Time period (in years) : "))
+
+SI = p*r*t/100
+
+print(SI)
+"""
+"""
+# This is for monthly calculator :
+p = float(input("Enter a Principal amount : "))
+r = float(input("Enter a Annual interest rate (percentage): "))
+m = int(input("Enter a number of months : "))
+
+SI = (p*r*m)/(12*100)
+
+print(SI)
+"""
+
+# Grade calculator (A, B, C, D, E, F). 
+
+"""
+marks=int(input("Enter Your number for grade : "))
+
+if marks >= 90:
+    print("A")
+elif marks >= 80:
+    print("B")
+elif marks >= 70:
+    print("C")
+elif marks >= 60:
+    print("D")
+elif marks >= 50:
+    print("E")
+else:
+    print("F")
+
+"""
+
+# Check whether a person is eligible to vote. 
+"""
+age = float(input("Enter your age : "))
+
+if age >= 18 :
+    print("You are eligible for vote Go and Drink !!")
+else :
+    print("You are not eligible Go and drink milk !!")
+
+"""
+
+# ATM Simulation :
+
+"""
+balance = 100000
+correct_pin = "0329"
+attempts = 3 
+
+def check_balance():
+    print(f"\nYour Current Balance : Rs. {balance}")
+
+def deposit():
+    global balance 
+    amount = float(input("Enter amount to deposit : Rs. "))
+
+    if amount > 0 :
+        balance += amount 
+        print("Deposit Successful!")
+        print(f"Update Balance: Rs {balance}")
+    else:
+        print("Invalid Amount")
+
+def withdraw():
+    global balance 
+    amount = float(input("Enter amount to withdraw: Rs. "))
+
+    if amount <= 0 :
+        print("invalid Amount !")
+
+    elif amount >balance :
+        print("Insufficient Balance !")
+
+    else:
+        balance -= amount 
+        print("Please collect your cash.")
+        print(f"Remining Balance: Rs. {balance}")
+
+def menu():
+    while True :
+        print("\n========== ATM MENU ==========")
+        print("1. Check Balance")
+        print("2. Deposit Money")
+        print("3. Withdraw Money")
+        print("4. Exit")
+        print("==============================")
+
+        choice = input("Enter your choice (1-4): ")
+
+        if choice == "1":
+            check_balance()
+
+        elif choice == "2":
+            deposit()
+
+        elif choice == "3":
+            withdraw()
+
+        elif choice == "4":
+            print("\nThank you for using our ATM!")
+            print("Have a Nice Day!")
+            break
+
+        else : 
+            print("Invalid Choice! Please try again.")
+
+
+# PIN Verification
+
+
+while attempts > 0:
+    pin = input("Enter 4-digit ATm Pin : ") 
+
+    if pin == correct_pin:
+        print("/nLogin Successful !")
+        menu()
+        break 
+
+    else:
+        attempts -= 1 
+        print ("Incorrect Pin! ")
+
+        if attempts > 0 :
+            print(f"Attempts Left: {attempts}")
+        else:
+            print("\nYour Card Has Been Blocked!")
+            print("Please Contact Your Bank.")
+
+"""
