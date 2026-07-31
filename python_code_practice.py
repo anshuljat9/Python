@@ -569,3 +569,43 @@ while attempts > 0:
             print("Please Contact Your Bank.")
 
 """
+
+# Merge two lists. 
+
+"""
+Grp_1 = ["Anshul","Abhinav","Abhinav","CP"]
+Grp_2 = ["Lalit","Akash","Ashish","Hiran"]
+
+merge = Grp_1 + Grp_2
+
+print(merge)
+"""
+
+# Find the sum and average of list elements.
+
+"""
+marks = [79,80,86,83,90]
+X = sum(marks)
+average = sum(marks) / len(marks)
+
+print("Your Sum of List is ",X)
+
+print("Your Average of List is ",average)
+"""
+
+# Print Fibonacci series. 
+
+"""
+n = int(input("Enter The number of terms : "))
+
+a = 0 
+b = 1 
+
+print("Fibonacci Series: ")
+
+for i in range(n):
+    print(a , end=" ")
+    c= a + b 
+    a = b 
+    b = c 
+"""
