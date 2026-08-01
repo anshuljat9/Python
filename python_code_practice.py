@@ -609,3 +609,51 @@ for i in range(n):
     a = b 
     b = c 
 """
+
+# Convert kilometers to meters.
+"""
+kilo = float(input("Enter a Kilometer : "))
+
+meter = kilo * 1000 
+
+print(meter)
+
+"""
+
+# Convert Celsius to Fahrenheit. 
+"""
+cel = int(input("Enter temprature in celsius : "))
+
+fah = 1.8*cel + 32
+
+print(fah) 
+
+"""
+
+# Login System 
+"""
+username = "anshuljat9"
+password = "0329"
+
+attempts = 3 
+
+while attempts > 0 :
+
+    user = input("Enter Your Username : ")
+    pwd = input("Enter Your Password : ")
+
+    if user == username and pwd == password:
+        print("Login Successfull !!")
+        break 
+
+    else :
+        attempts -= 1 
+
+        if attempts > 0:
+            print("Invalid Username or Password ")
+            print("Attempts Lefts :", attempts)
+
+        else :
+            print("Your Account is Block Temporary")
+
+"""
