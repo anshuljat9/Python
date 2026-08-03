@@ -657,3 +657,125 @@ while attempts > 0 :
             print("Your Account is Block Temporary")
 
 """
+
+# FUNCTION CODES :
+
+# Write a function to add two numbers.
+
+"""
+def Sum(a, b):
+    total = a + b
+    print(total)
+    return total
+
+Sum(150, 56)
+
+"""
+
+# Write a function to subtract two numbers.
+
+"""
+def Sub(a, b):
+    total = a - b
+    print(total)
+    return total
+
+Sub(150, 50)
+
+"""
+
+# Write a function to multiply two numbers.
+
+"""
+def Multi(a, b):
+    total = a * b
+    print(total)
+    return total
+
+Multi(150, 50)
+
+"""
+
+# Write a function to divide two numbers.
+
+"""
+def Div(a, b):
+    total = a / b
+    print(total)
+    return total
+
+Div(150, 50)
+
+"""
+
+# Write a function to find the square of a number.
+
+"""
+def sqr(n):
+    square = n * n   # also use this square = n ** 2 
+    print(square)
+    return square
+
+sqr(9)
+
+"""
+
+# Write a function to find the cube of a number.
+
+"""
+def cube(n):
+    total = n ** 3 
+    print(total)
+    return total
+
+cube(2)
+
+"""
+
+# Write a Function for calculate a power 
+
+"""
+def power(n):
+    total = pow(n, 4)
+    print(total)
+    return total
+
+power(2)
+
+"""
+
+# Write a function to calculate the area of a rectangle.
+
+"""
+def area_rectangle(l ,b):
+    sum = l * b 
+    print(sum)
+    return sum 
+
+area_rectangle(2, 6)
+
+"""
+
+# Write a function to calculate the area of a circle.
+
+"""
+def area_circle(r):
+    sum = 3.14 * (r ** 2) 
+    print(sum)
+    return sum 
+
+area_circle(4)
+
+"""
+
+# Write a function to calculate the average of three numbers.
+
+"""
+def avg(a,b,c):
+    sum = (a+b+c)/3 
+    print(sum)
+    return sum 
+
+avg(1,2,3)
+
+"""
