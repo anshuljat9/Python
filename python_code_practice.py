@@ -666,7 +666,7 @@ while attempts > 0 :
 def Sum(a, b):
     total = a + b
     print(total)
-    return total
+    
 
 Sum(150, 56)
 
@@ -678,7 +678,7 @@ Sum(150, 56)
 def Sub(a, b):
     total = a - b
     print(total)
-    return total
+    
 
 Sub(150, 50)
 
@@ -690,7 +690,7 @@ Sub(150, 50)
 def Multi(a, b):
     total = a * b
     print(total)
-    return total
+    
 
 Multi(150, 50)
 
@@ -702,7 +702,7 @@ Multi(150, 50)
 def Div(a, b):
     total = a / b
     print(total)
-    return total
+    
 
 Div(150, 50)
 
@@ -714,7 +714,7 @@ Div(150, 50)
 def sqr(n):
     square = n * n   # also use this square = n ** 2 
     print(square)
-    return square
+    
 
 sqr(9)
 
@@ -726,7 +726,7 @@ sqr(9)
 def cube(n):
     total = n ** 3 
     print(total)
-    return total
+    
 
 cube(2)
 
@@ -738,7 +738,7 @@ cube(2)
 def power(n):
     total = pow(n, 4)
     print(total)
-    return total
+    
 
 power(2)
 
@@ -750,7 +750,7 @@ power(2)
 def area_rectangle(l ,b):
     sum = l * b 
     print(sum)
-    return sum 
+    
 
 area_rectangle(2, 6)
 
@@ -762,7 +762,6 @@ area_rectangle(2, 6)
 def area_circle(r):
     sum = 3.14 * (r ** 2) 
     print(sum)
-    return sum 
 
 area_circle(4)
 
@@ -774,8 +773,50 @@ area_circle(4)
 def avg(a,b,c):
     sum = (a+b+c)/3 
     print(sum)
-    return sum 
+   
 
 avg(1,2,3)
 
 """
+
+# Function to check whether a number is even or odd.
+"""
+# THis is without return :
+def even_odd(n):
+    if n % 2 == 0 :
+        print(n ,"is a EVEN !")
+    else:
+        print(n ,"is a ODD !")
+
+
+even_odd(3)
+
+"""
+"""
+# This is with return :
+def even_odd(n):
+    if n % 2 == 0 :
+        return n,'is a EVEN !'
+    else:
+        return n,'is a ODD !'
+
+
+print(even_odd(3))
+
+"""
+
+# Function to check whether a number is positive, negative, or zero.
+
+"""
+def check_num(n):
+    if n > 0:
+        print("This is Positive number ")
+    elif n < 0 :
+        print("This is negative number ")
+    else:
+        print("This is ZERO !! ")
+
+check_num(-2)
+
+"""
+
