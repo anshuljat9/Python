@@ -820,3 +820,36 @@ check_num(-2)
 
 """
 
+# Function to calculate BMI.
+
+"""
+
+def bmi():
+
+    weight = float(input("Enter Weight (kg): "))
+    height = float(input("Enter Height (m): "))
+
+    value = weight / (height ** 2)
+
+    print("BMI = ",round(value, 2))
+    
+bmi()
+
+"""
+
+# Function to calculate electricity bill.
+
+"""
+def bill():
+
+    unit = float(input("Enter your Unit : "))
+
+    value = unit * 8.5 
+
+    print("Your Electricity Bill is",value )
+
+bill()
+
+"""
+
+#
