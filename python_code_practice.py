@@ -865,6 +865,7 @@ greet(a)
 
 # WAF to find factorial of a number using return .
 
+"""
 def fact(n):
     fact = 1
     for i in range(1 ,n+1):
@@ -874,6 +875,7 @@ n = int(input("Enter a Number : "))
 
 print(fact(n))
 
+"""
 
 # WAF to check the given number is even or odd .
 
@@ -920,4 +922,19 @@ def electricity_bill(units, price_per_unit=6):
 electricity_bill(250)
 
 """
-# 
+
+# Reverse name 
+"""
+name = "Anshul"
+reverse_name = "".join(reversed(name))
+print(reverse_name)
+
+"""
+
+# Reverse Number 
+"""
+a = "123"
+reverse = "".join(reversed(a)) 
+print(reverse)
+
+"""
