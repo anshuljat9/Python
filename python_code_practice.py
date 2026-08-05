@@ -854,8 +854,70 @@ bill()
 
 # funvtion of hello ! 
 
+"""
 def greet(name):
     print("Hello", name)
 a = input("Enter your name : ")
 
 greet(a)
+
+"""
+
+# WAF to find factorial of a number using return .
+
+def fact(n):
+    fact = 1
+    for i in range(1 ,n+1):
+        fact *= i 
+    return fact
+n = int(input("Enter a Number : ")) 
+
+print(fact(n))
+
+
+# WAF to check the given number is even or odd .
+
+"""
+def even_odd(n):
+    if n % 2 == 0 :
+        print(n ,"is a EVEN !")
+    else:
+        print(n ,"is a ODD !")
+
+even_odd(3)
+
+"""
+
+# WAF to calculate area of rectangle .
+"""
+def area_rectangle(l ,b):
+    sum = l * b 
+    print(sum)
+    return sum 
+
+area_rectangle(2, 6)
+"""
+
+# WAF to calculate simple interest .
+"""
+def STI(p, r, t):
+    total = (p * r * t) / 100
+    print(total)
+    return total
+
+STI(100000 , 24 ,1)
+
+"""
+
+# WAF to calculate a electricity bill by taking a defalut arrugemt is price of 6 rs per unit .
+
+"""
+def electricity_bill(units, price_per_unit=6):
+    total_bill = units * price_per_unit
+    print("Total Electricity Bill: Rs.", total_bill)
+    return total_bill
+
+electricity_bill(250)
+
+"""
+# 
