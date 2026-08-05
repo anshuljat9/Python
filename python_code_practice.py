@@ -852,4 +852,10 @@ bill()
 
 """
 
-#
+# funvtion of hello ! 
+
+def greet(name):
+    print("Hello", name)
+a = input("Enter your name : ")
+
+greet(a)
