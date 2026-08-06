@@ -429,7 +429,8 @@ for i in range(n):
 
 # Calculate simple interest
 
-import math 
+import math
+import os 
 """
 #This is for yearly calculator :
 p = float(input("Enter a Principal amount : "))
@@ -939,4 +940,147 @@ print(reverse)
 
 """
 
-# 
+# File I/O :
+
+# syntax : f = open("file_name","mode")
+
+# read a demo file :
+"""
+f = open("demo.txt","r")
+data = f.read
+print(data)
+print(type(data))
+f.close()
+
+"""
+
+# Basic Mode of File I/O :
+"""
+'r' → sirf reading ke liye open karta hai (default mode), file exist karni chahiye warna error
+'w' → writing ke liye open karta hai, but pehle purana content overwrite/truncate kar deta hai
+'x' → naya file create karta hai writing ke liye — agar file already exist karti hai to error dega
+'a' → writing ke liye open karta hai, but existing content ke end mein append karta hai, purana data safe rehta hai
+'b' → binary mode (images, pdf, etc jaise non-text files ke liye)
+'t' → text mode (default), normal string data ke liye
+'+' → same file ko read aur write dono ke liye open karta hai (e.g. 'r+', 'w+')
+"""
+
+# Read only 5 element from demo.txt 
+
+"""
+f = open("demo.txt","r")
+data = f.read(5)
+print(data)
+print(type(data))
+f.close()
+"""
+
+# Read a complete line from demo.txt 
+
+"""
+f = open("demo.txt","r")
+
+line1 = f.readline()
+print(line1)
+
+line2 = f.readline()
+print(line2)
+
+f.close()
+"""
+
+# Writing a new line in demo.txt 
+# 'w' and 'a' mode mai aapn file bhi create kar sakte hai agar file exist nahi karti hai to .
+# Use 'w' mode :
+"""
+f = open("demo.txt","w") # w = puri file ko overwrite kar dega 
+
+f.write("LE bhai 'w' (mode) ne toh puri file change kar di ")
+
+f.close()
+"""
+
+# Use 'a' mode :
+"""
+f = open("demo.txt","a") # a = puri file ko overwrite nahi karega , bas end me add karega
+
+f.write("\nLE bhai 'a' (mode) ne toh puri file ko overwrite nahi kiya , bas end me add kar diya ")
+
+f.close()
+"""
+
+# use 'r+' mode :
+"""
+f = open("demo.txt","r+")
+f.write("LE bhai 'r+' (mode) ne toh puri file ko overwrite nahi kiya , bas starting me add kar diya ")
+print(f.read())
+f.close()
+"""
+
+# use 'w+' mode :
+"""
+f = open("demo.txt","w+")
+f.write("\nLE bhai 'w+' (mode) ne toh puri file ko overwrite kar diya")
+print(f.read())
+"""
+
+# use 'a+' mode :
+"""
+f = open("demo.txt","a+")
+f.write("\nLE bhai 'a+' (mode) ne toh puri file ko overwrite nahi kiya , bas end me add kar diya ")
+print(f.read())
+"""
+
+# 'With' syntax for file handling :
+"""
+with open("demo.txt","r") as f:
+    data = f.read()
+    print(data)
+
+with open("demo.txt","w") as f:
+    f.write("New line added using 'with' syntax in 'w' mode")
+"""
+
+# Deleting a file using os module :
+
+# syntax : os.remove("file_name") but first import os module or file exist karna chahiye warna error dega .
+"""
+import os
+
+os.remove("sample.txt") # ye file delete kar dega
+"""
+
+# Create a new file "practice.txt" using python . add the following data in it .
+
+"""
+f = open("practice.txt", "w")
+
+f.write("Hi everyone\nwe are learning file I/O\nUsing Java\nI like programming in Java.")
+f.close()
+"""
+
+# WAF that replace all occurrences of "Java" with "Python" in the file "practice.txt".
+
+"""
+with open("practice.txt", "r") as f:
+    data = f.read()
+
+new_data = data.replace("Java", "Python")
+print(new_data)
+
+with open("practice.txt", "w") as f:
+    f.write(new_data)
+
+"""
+
+# Search if the word "Learning" exists in the file or not .
+"""
+word = "learning"
+with open("practice.txt", "r") as f:
+    data = f.read()
+    if(data.find(word) != -1):
+        print("Found")
+    else:
+        print("Not Found")
+
+"""
