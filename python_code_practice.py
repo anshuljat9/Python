@@ -1103,3 +1103,40 @@ def find_word_in_file():
 
 find_word_in_file()
 """
+
+# WAF to find a sum of any numbers of values using variable length argument
+
+"""
+def sum_values(*n):
+    total = 0
+    for i in n:
+        total += i
+        print("Sum is : ", total)
+
+
+sum_values(1, 2, 3, 4, 5, 6, 7, 8, 9, 10) 
+"""
+# WAF to find a sum of any numbers of values using keyword length argument.
+"""
+def sum_values(**n):
+    total = 0
+    for key, value in n.items():
+        total += value
+    print("Sum is : ", total)
+
+
+sum_values(a=1, b=2, c=3, d=4, e=5)
+"""
+
+# Find the maximun number using variable length argument.
+
+"""
+def find_max(*n):
+    max = n[0]
+    for i in n :
+        if i > max :
+            max = i 
+    print("Max is : ", max)
+
+find_max(1, 20, 3, 4, 50, 6, 7, 8, 9, 10)
+"""
