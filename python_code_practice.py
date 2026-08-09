@@ -1142,3 +1142,41 @@ find_max(1, 20, 3, 4, 50, 6, 7, 8, 9, 10)
 """ 
 
 # OOPs (Object Oriented Programming System) :
+
+# Class and Object : Class is a blueprint for creating objects . 
+# Create a class and object of that class and print the name of the student.
+"""
+class Student:
+    name = "Anshul Jat"
+
+s1 = Student()
+print(s1.name)
+
+s2 = Student()
+print(s2.name)
+"""
+
+# Create a class and object of that class and print the color and brand of the car.
+"""
+class Car:
+    color = "Red"
+    brand = "BMW"
+
+c1 = Car()
+print(c1.color)
+print(c1.brand)
+"""
+
+# Construtor : A constructor is a special method that is automatically called when an object of a class is created. It is used to initialize the attributes of the class. In Python, the constructor method is defined using the __init__() method.
+
+class Student:
+    def __init__(self, name,marks):
+        self.name = name 
+        self.marks = marks
+        print("adding new student in database")
+
+s1 = Student("Anshul Jat",74)
+print(s1.name , s1.marks)
+
+s2 = Student("Tarika",96)
+print(s2.name , s2.marks)
