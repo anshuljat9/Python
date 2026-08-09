@@ -429,8 +429,7 @@ for i in range(n):
 
 # Calculate simple interest
 
-import math
-import os 
+import math 
 """
 #This is for yearly calculator :
 p = float(input("Enter a Principal amount : "))
@@ -1139,4 +1138,7 @@ def find_max(*n):
     print("Max is : ", max)
 
 find_max(1, 20, 3, 4, 50, 6, 7, 8, 9, 10)
-"""
+
+""" 
+
+# OOPs (Object Oriented Programming System) :
