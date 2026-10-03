@@ -1169,6 +1169,7 @@ print(c1.brand)
 
 # Construtor : A constructor is a special method that is automatically called when an object of a class is created. It is used to initialize the attributes of the class. In Python, the constructor method is defined using the __init__() method.
 
+"""
 class Student:
     def __init__(self, name,marks):
         self.name = name 
@@ -1180,3 +1181,195 @@ print(s1.name , s1.marks)
 
 s2 = Student("Tarika",96)
 print(s2.name , s2.marks)
+"""
+
+
+# Inheritence 
+"""
+class p : 
+    def __init__(self):
+        print("Anshul Jat")
+
+class c(p):
+    def m1(slef):
+        print("Bhawesh Jat")
+
+object1 = c()
+object1.m1()
+
+"""
+# create a class student containing name , roll no and branch drive a class student1 and that access marks in puthon , physics and mathemathics and also calculate the percentage ?
+"""
+class Student:
+    def __init__(self, name, roll_no, branch):
+        self.name = name
+        self.roll_no = roll_no
+        self.branch = branch
+
+    def display_info(self):
+        print(f"Name: {self.name}")
+        print(f"Roll No: {self.roll_no}")
+        print(f"Branch: {self.branch}")
+
+class Student1(Student):
+    def __init__(self, name, roll_no, branch, marks):
+        super().__init__(name, roll_no, branch)
+        self.marks = marks
+
+    def calculate_percentage(self):
+        total_marks = sum(self.marks.values())
+        percentage = (total_marks / (len(self.marks) * 100)) * 100
+        return percentage
+
+    def display_marks(self):
+        for subject, mark in self.marks.items():
+            print(f"{subject}: {mark}")
+
+
+"""
+
+# Create a Python program using inheritance in which Student is the parent class and Exam is the child class. The Student class should accept the student's name and roll number, while the Exam class should accept marks for three subjects, calculate the student's total marks and percentage, and display all the details including name, roll number, subject marks, total marks, and percentage.
+"""
+class Student:
+    def __init__(self):
+        self.name = input("Enter student name: ")
+        self.roll_no = int(input("Enter roll number: "))
+
+
+class Exam(Student):
+    def __init__(self):
+        super().__init__()
+
+        self.m1 = float(input("Enter marks of Subject 1: "))
+        self.m2 = float(input("Enter marks of Subject 2: "))
+        self.m3 = float(input("Enter marks of Subject 3: "))
+
+    def percentage(self):
+        total = self.m1 + self.m2 + self.m3
+        percentage = total / 3
+
+        print("\n--- Student Details ---")
+        print("Name:", self.name)
+        print("Roll Number:", self.roll_no)
+        print("Total Marks:", total)
+        print("Percentage:", percentage, "%")
+
+
+# Object of child class
+student = Exam()
+student.percentage()
+
+"""
+
+# Super Function :
+# -> II oarent and child contains a member with same name then to call explicitly from the child class we should go for super method .
+
+# Create the base class called a person holding the variable name , age ,height and weight . child class naem is student holding roll no and marks . 
+"""
+class Person:
+    def __init__(self, name, age, height, weight):
+        self.name = name
+        self.age = age
+        self.height = height
+        self.weight = weight
+
+
+class Student(Person):
+    def __init__(self, name, age, height, weight, roll_no, marks):
+        super().__init__(name, age, height, weight)
+        self.roll_no = roll_no
+        self.marks = marks
+
+
+s1 = Student("Anshul", 18, 180, 65, 32, 85)
+
+print("Name:", s1.name)
+print("Age:", s1.age)
+print("Height:", s1.height)
+print("Weight:", s1.weight)
+print("Roll No:", s1.roll_no)
+print("Marks:", s1.marks)
+
+"""        
+
+# Polimorphism : 
+# it means many form , it gives more flexibility to the programmer . 
+
+# Write a aprogram to overload plus operator to add two objects of a class .
+"""
+class Book :
+    def __init__(self, pages):
+        self.pages = pages 
+
+b1 = Book(100)
+b2 = Book(200)
+
+print("Book 1 Pages : ", b1.pages)
+print("Book 2 Pages : ", b2.pages)
+
+"""
+
+# write a program to overload subtraction operator to find a diffrence between two objects of a class .
+"""
+class Number :
+    def __init__(self, value):
+        self.value = value 
+
+    def __sub__(self, other):
+        return self.value - other.value
+
+value1 = Number(10)
+value2 = Number(5)
+
+print("Value 1 : ", value1.value)
+print("Value 2 : ", value2.value)
+print("Difference : ", value1 - value2)
+"""
+# write a prograam to compare two object using equality operator .
+"""
+class Student:
+    def __init__(self, name, marks):
+        self.name = name
+        self.marks = marks
+
+    def __eq__(self, other):
+        return self.marks == other.marks
+
+name1 = input("Enter name of Student 1: ")
+marks1 = int(input("Enter marks of Student 1: "))
+name2 = input("Enter name of Student 2: ")
+marks2 = int(input("Enter marks of Student 2: "))
+
+student1 = Student(name1, marks1)
+student2 = Student(name2, marks2)
+
+if student1 == student2:
+    print("Both students have the same marks.")
+else:
+    print("The students have different marks.")
+"""
+# write a programm to compare the marks of two student using greater than operator .
+"""
+class Student:
+    def __init__(self, name, marks):
+        self.name = name
+        self.marks = marks
+
+    def __gt__(self, other):
+        return self.marks > other.marks
+
+name1 = input("Enter name of Student 1: ")
+marks1 = int(input("Enter marks of Student 1: "))
+name2 = input("Enter name of Student 2: ")
+marks2 = int(input("Enter marks of Student 2: "))
+
+student1 = Student(name1, marks1)
+student2 = Student(name2, marks2)
+
+if student1 > student2:
+    print(f"{student1.name} has higher marks than {student2.name}.")
+elif student2 > student1:
+    print(f"{student2.name} has higher marks than {student1.name}.")
+else:
+    print("Both students have the same marks.")
+"""
