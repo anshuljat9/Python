@@ -1172,7 +1172,7 @@ print(c1.brand)
 """
 class Student:
     def __init__(self, name,marks):
-        self.name = name 
+        self.name = name # self is liye use kya hai kyu ki name sab ke liye alag hota hai toh woh object ko represent karta hai .
         self.marks = marks
         print("adding new student in database")
 
@@ -1182,6 +1182,12 @@ print(s1.name , s1.marks)
 s2 = Student("Tarika",96)
 print(s2.name , s2.marks)
 """
+
+# Attribute : An attribute is a variable that is associated with an object. It is used to store data or state information about the object. In Python, attributes are defined within the class and can be accessed using the dot notation.
+
+# object attribute > class attribute .
+
+
 
 
 # Inheritence 
@@ -1372,4 +1378,66 @@ elif student2 > student1:
     print(f"{student2.name} has higher marks than {student1.name}.")
 else:
     print("Both students have the same marks.")
+
 """
+
+# Create two parents class called personal details and professional details create a child class called employee that inherit both classes and display the company employee profit , professional company name , designation , experience .
+"""
+class personal_details :
+    def P1(self):
+        self.name = input("Enter employee name : ")
+        self.age = int(input("Enter employee age : "))
+        self.city = input("Enter city : ")
+
+class professional_deatils:
+    def P2(self):
+        self.cname = input("Enter Company name : ")
+        self.dname = input("Enter designation name : ")
+        self.exp = int(input("Enter Experince : "))
+
+class employee(personal_details, professional_deatils):
+    def display(self):
+        print("EMPLOYEE DETAILS : ")
+        print("employee name : ",self.name)
+        print("employee age : ",self.age)
+        print("employee city : ",self.city)
+        print("Company name : ",self.cname)
+        print("Designation name : ",self.dname)
+        print("Experince : ",self.exp)
+
+e = employee()
+e.P1()
+e.P2()
+e.display()
+"""
+
+
+# Abstract Class :
+
+# create a abstract class called shape within a abstract method Area . create a class called cirle that inherit from same  and calculate area of a circle . 
+
+from abc import ABC, abstractmethod
+import math
+
+
+class Shape(ABC):
+
+    @abstractmethod
+    def Area(self):
+        pass
+
+
+class Circle(Shape):
+
+    def __init__(self, radius):
+        self.radius = radius
+
+    def Area(self):
+        return math.pi * self.radius * self.radius
+
+
+r = float(input("Enter radius: "))
+
+c = Circle(r)
+
+print("Area of Circle =", c.Area())
