@@ -210,6 +210,7 @@ print(numbers)
 
 # Collection of objects is a data structure that can hold multiple objects of the same or different types. In Python, we can use lists, tuples, sets, and dictionaries to create collections of objects.
 
+"""
 class Customer :
     def __init__(self, name, age):
         self.name = name 
@@ -226,3 +227,136 @@ L = [c1, c2, c3]
 
 for i in L:
     i.intro()
+
+"""
+
+
+# Static Variable is a variable that is shared among all instances of a class. It is defined within the class but outside any instance methods. In Python, we can create static variables by defining them at the class level.
+# This is different for all instances of the class. 
+"""
+class Student:
+    college = "Arya College"  # Static/Class variable
+
+    def __init__(self, name):
+        self.name = name      # Instance variable
+
+s1 = Student("Anshul")
+s2 = Student("Rahul")
+
+print(s1.college)
+print(s2.college)
+"""
+
+# Inheritance is a mechanism in object-oriented programming that allows a class to inherit attributes and methods from another class. The class that inherits is called the child class or subclass, and the class being inherited from is called the parent class or superclass. Inheritance promotes code reusability and establishes a relationship between classes.
+
+"""
+class User:
+    def login(self):
+        print("Login")
+    
+    def register(self):
+        print("Register")
+
+class Student(User):  # Student class inherits from User class
+
+    def enroll(self):
+        print("Enroll in a course")
+
+    def review(self):
+        print("Review a course")
+
+
+stu1 = Student()
+
+stu1.login()  # Inherited method from User class
+stu1.register()  # Inherited method from User class
+stu1.enroll()  # Method from Student class
+stu1.review()  # Method from Student class
+
+"""
+
+"""
+class Phone:
+
+    def __init__(self, price , brand ):
+        print("Inside phone constructor")
+        self.price = price
+        self.brand = brand
+
+class SmartPhone(Phone):
+    pass 
+
+s = SmartPhone(2000 ,"Apple")
+print(s.brand)
+
+"""
+
+
+# Polymorphism means "many forms" and allows the same method, function or operator to behave differently depending on the object or data it works with. This flexibility helps create more reusable, maintainable and scalable code.
+
+"""
+class Dog:
+    def sound(self):
+        print("Dog barks")
+
+class Cat:
+    def sound(self):
+        print("Cat meows")
+
+class Cow:
+    def sound(self):
+        print("Cow moos")
+
+
+d = Dog()
+c = Cat()
+co = Cow()
+
+d.sound()
+c.sound()
+co.sound()
+
+"""
+
+# Agar Child ke pass aapna khud ka constructor hai toh parent ka constructor call nhi hoga . 
+
+# Super() :
+
+class Phone :
+
+    def __init__(self , price , brand):
+        self.price = price 
+        self.brand = brand 
+
+    def buy(self):
+        print("Buying a phone")
+
+class Smartphone(Phone):
+
+    def buy(self):
+        print("Buying a smartphone")
+        super().buy()  # super use karne se parent ke buy ko bhi call kar sakte hai 
+
+s = Smartphone(20000 , "Apple")
+
+s.buy()
+
+# Super() is a use only in class first constructor.
+
+class Parent:
+
+    def __init__(self):
+        self.num = 100 
+
+class Child(Parent):
+
+    def __init__(self):
+        super().__init__()
+        self.var = 200
+
+    def show(self):
+        print(self.num)
+        print(self.var)
+
+son = Child()
+son.show()
